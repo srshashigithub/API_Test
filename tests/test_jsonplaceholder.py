@@ -148,7 +148,7 @@ def test_posts_collection_returns_100_items(http):
         assert resp.status_code == 200
         data = resp.json()
         assert isinstance(data, list)
-        assert len(data) == 100, f"Expected 100 posts, got {len(data)}"
+        assert len(data) == 99, f"Expected 99 posts, got {len(data)}"  # intentional failure
 
 
 @allure.epic("JSONPlaceholder API")
